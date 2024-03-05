@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomeScreen from "./pages/HomeScreen";
+import LoginScreen from "./pages/LoginScreen";
+import SignInScreen from "./pages/SignInScreen";
+import RegistrationScreen from "./pages/RegistrationScreen";
+import { UserProvider } from "./pages/UserContext";
+import MovieDetailsPage from "./MovieDetailsPage";
 function App() {
+  const user = null;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <UserProvider>
+          <Routes>
+            <Route path="/login" element={<LoginScreen />} />
+            <Route path="/signin" element={<SignInScreen />} />
+            <Route path="/signup" element={<RegistrationScreen />} />
+            <Route path="/home" element={<HomeScreen />} />
+            <Route path="/movie/:id" element={<MovieDetailsPage />} />
+            <Route path="/" element={user ? <HomeScreen /> : <LoginScreen />} />
+          </Routes>
+        </UserProvider>
+      </BrowserRouter>
     </div>
   );
 }

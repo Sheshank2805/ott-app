@@ -1,0 +1,89 @@
+
+.signupScreen {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://blog.vpncity.com/wp-content/uploads/2020/01/xx.png"); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.signupScreen > form {
+    max-width: 300px;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    text-align: center;
+  }
+  
+.signupScreen >form >input {
+    outline-width: 0;
+    height: 40px;
+    margin-bottom: 14px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 15px;
+}
+.signupScreen > form >button{
+    padding: 16px 20px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #e50914;
+    border: none;
+    font-weight:600 ;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.signupScreen > form > h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #fff;
+}
+.signupScreen_gray{
+    color: gray;
+}
+.signupScreen_link:hover{
+cursor:pointer;
+text-decoration: underline;
+color: #fff;
+}
+/* .signupScreen > form > input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  
+  .signupScreen > form > .terms-text {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+  }
+   */
+   .signupScreen > form > span {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  
+  .signupScreen > form > span input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  .signupScreen > form > span h4 {
+    margin: 0;
+    color: #fff;
+  }
+  .error-message {
+    color: #ff0000;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .gray{
+    color: gray;
+  }
